@@ -1,3 +1,4 @@
+# Author: Pari Malam
 import requests
 
 options = {
@@ -31,15 +32,6 @@ while True:
     if country_code == "all" or country_code.upper() in options.values():
         break
     print("Invalid country code, please try again.")
-
-while True:
-    try:
-        op = int(input("Enter an option: "))
-        if op in options:
-            break
-        print("Invalid option, please try again.")
-    except ValueError:
-        print("Invalid input, please try again.")
 
 url = f"https://api.proxyscrape.com/v2/?request=displayproxies&protocol=all&timeout={options[op]['timeout']}&country={options[op]['country']}"
 proxies = requests.get(url).text
