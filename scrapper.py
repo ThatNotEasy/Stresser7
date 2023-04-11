@@ -16,9 +16,9 @@ def banners():
     Description    :     Proxy Auto Scrapper [#OpsPETIR CyberTroopers]
 
 
-    Forum          :      https://dragonforce.io
-    Github         :      https://github.com/Pari-Malam
-    Telegram       :      https://telegram.me/DragonForceIO     I think, ur face got problemo? hehe boiss :P
+    Forum          :     https://dragonforce.io
+    Github         :     https://github.com/Pari-Malam
+    Telegram       :     https://telegram.me/DragonForceIO     I think, ur face got problemo? hehe boiss :P
     {Fore.WHITE}═══════════════════════════════════════════════════════════════════════════════════════════════════════════════""")
 banners()
 
