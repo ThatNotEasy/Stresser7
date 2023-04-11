@@ -3,3 +3,4 @@ colorama
 pysocks
 pool
 bs4
+scapy
