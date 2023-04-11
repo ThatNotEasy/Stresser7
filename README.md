@@ -11,8 +11,9 @@ However, it is possible for an HTTP flood attack to also affect lower layers of 
 ## Python Version:
 - 3.8
 ## Get start with:
-- pip install -r requirements.txt
-- python cybertroopers.py
+- pip3 install -r requirements.txt
+- python3 scrapper.py
+- python3 cybertroopers.py
 ## Footprints Notes:
 - By using this tool, you agree that you are using it for educational purposes only and that you will not use it for any illegal activity. You also agree to bear all risks associated with the use of this tool. I will not be responsible for direct or indirect damage caused by the use of this tool.
 ## Author:
