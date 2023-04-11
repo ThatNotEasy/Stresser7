@@ -1,5 +1,26 @@
 # Author: Pari Malam
 import requests
+from colorama import Fore, Style
+
+def banners():
+    print(f"""{Style.BRIGHT + Fore.RED}
+    ██████╗ ██████╗  █████╗  ██████╗  ██████╗ ███╗   ██╗███████╗ ██████╗ ██████╗  ██████╗███████╗   ██╗ ██████╗ 
+    ██╔══██╗██╔══██╗██╔══██╗██╔════╝ ██╔═══██╗████╗  ██║██╔════╝██╔═══██╗██╔══██╗██╔════╝██╔════╝   ██║██╔═══██╗
+    ██║  ██║██████╔╝███████║██║  ███╗██║   ██║██╔██╗ ██║█████╗  ██║   ██║██████╔╝██║     █████╗     ██║██║   ██║
+    ██║  ██║██╔══██╗██╔══██║██║   ██║██║   ██║██║╚██╗██║██╔══╝  ██║   ██║██╔══██╗██║     ██╔══╝     ██║██║   ██║
+    ██████╔╝██║  ██║██║  ██║╚██████╔╝╚██████╔╝██║ ╚████║██║     ╚██████╔╝██║  ██║╚██████╗███████╗██╗██║╚██████╔╝
+    ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═╝      ╚═════╝ ╚═╝  ╚═╝ ╚═════╝╚══════╝╚═╝╚═╝ ╚═════╝ 
+                                                                                                                
+    {Fore.WHITE}═══════════════════════════════════════════════════════════════════════════════════════════════════════════════{Style.BRIGHT + Fore.YELLOW}  
+    Coded By       :     Pari Malam
+    Description    :     Proxy Auto Scrapper [#OpsPETIR CyberTroopers]
+
+
+    Forum          :      https://dragonforce.io
+    Github         :      https://github.com/Pari-Malam
+    Telegram       :      https://telegram.me/DragonForceIO     I think, ur face got problemo? hehe boiss :P
+    {Fore.WHITE}═══════════════════════════════════════════════════════════════════════════════════════════════════════════════""")
+banners()
 
 options = {
     1: {"country": "all", "timeout": "750"},
@@ -28,10 +49,22 @@ options = {
 }
 
 while True:
-    country_code = input("Enter a country code (type 'all' for all countries): ")
+    country_code = input(f"{Fore.GREEN}\nEnter a country code (type 'all' for all countries): {Style.RESET_ALL}")
     if country_code == "all" or country_code.upper() in options.values():
         break
-    print("Invalid country code, please try again.")
+    print(f"{Fore.RED}Invalid country code, please try again.{Style.RESET_ALL}")
+
+while True:
+    try:
+        print(f"{Fore.RED}{'Options:':<10}{'Country':<10}{'Timeout':<10}{Style.RESET_ALL}")
+        for op, option in options.items():
+            print(f"{Fore.GREEN}{op:<10}{option['country']:<10}{option['timeout']:<10}{Style.RESET_ALL}")
+        op = int(input(f"{Fore.CYAN}Enter an option - [1-23]: {Style.RESET_ALL}"))
+        if op in options:
+            break
+        print(f"{Fore.RED}Invalid option, please try again.{Style.RESET_ALL}")
+    except ValueError:
+        print(f"{Fore.RED}Invalid input, please try again.{Style.RESET_ALL}")
 
 url = f"https://api.proxyscrape.com/v2/?request=displayproxies&protocol=all&timeout={options[op]['timeout']}&country={options[op]['country']}"
 proxies = requests.get(url).text
@@ -39,4 +72,4 @@ proxies = requests.get(url).text
 with open("proxy.txt", "w") as f:
     f.write(proxies)
 
-print("Proxies saved to 'proxy.txt'.")
+print(f"{Fore.GREEN}Proxies saved to 'proxy.txt'.{Style.RESET_ALL}")
