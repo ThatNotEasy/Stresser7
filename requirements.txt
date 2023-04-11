@@ -4,4 +4,3 @@ pysocks
 pool
 bs4
 scapy
-playwright
