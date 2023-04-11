@@ -1,1 +1,5 @@
+requests
 colorama
+pysocks
+pool
+bs4
