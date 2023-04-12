@@ -1,6 +1,7 @@
 requests
 colorama
 PySocks
+scapy-python3
 pool
 bs4
 scapy
