@@ -1,4 +1,4 @@
-## 7Layers-Maybe
+## Stresser7
 - Stresser with 7-Layers DoS Attack Tool-KID
 ## HTTP Flood
 - HTTP Flood is typically considered a 7-layer (application layer) DDoS attack,
