@@ -17,7 +17,7 @@ However, it is possible for an HTTP flood attack to also affect lower layers of 
 - pip install -r requirements.txt
 - python cybertroopers.py
 ## Footprints Notes:
--  Bedukk jelaaaaaa labuuuu oiii
+-  ISRAHELL ATTACK
 ## Author:
 - Pari Malam
 ## Contacts:
