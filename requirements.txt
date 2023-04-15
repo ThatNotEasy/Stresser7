@@ -6,4 +6,4 @@ scapy-python3
 pool
 bs4
 scapy
-kemene
+kamene
