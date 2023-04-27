@@ -11,15 +11,18 @@ However, it is possible for an HTTP flood attack to also affect lower layers of 
 ![Screenshot_2](https://user-images.githubusercontent.com/25004320/231667216-f5ccb466-d121-40c9-9a73-c857103b8b01.png)
 ## Demonstration:
 ![bandicam 2023-04-12 07-48-34-208](https://user-images.githubusercontent.com/25004320/231313048-788b71b6-f399-4306-bde7-85f96d0e24af.gif)
-## Python Version:
-- 3.8
-## Get start with:
-- pip install -r requirements.txt
-- python cybertroopers.py
-## Footprints Notes:
--  ISRAHELL ATTACK
-## Author:
+## Requirements
+- Python3.7+
+## Supported Operating System
+- Linuxer
+- Wingays
+## Get start with
+- pip/pip3 install -r requirements.txt
+- python/python3 joomla.py
+## Footprints Notes
+- By using this tool, you agree that you are using it for educational purposes only and that you will not use it for any illegal activity. You also agree to bear all risks associated with the use of this tool. I will not be responsible for direct or indirect damage caused by the use of this tool.
+## Author
 - Pari Malam
-## Contacts:
+## Contacts
 [![Telegram](https://img.shields.io/badge/-Telegram-blue)](https://telegram.me/SurpriseMTFK)
 [![Forum](https://img.shields.io/badge/-Forum-red)](https://dragonforce.io)
