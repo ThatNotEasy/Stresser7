@@ -10,7 +10,7 @@ However, it is possible for an HTTP flood attack to also affect lower layers of 
 ![Screenshot_2](https://user-images.githubusercontent.com/25004320/231667216-f5ccb466-d121-40c9-9a73-c857103b8b01.png)
 ## Requirements
 - Python3.7+
-## Supported Operating System
+## Supported Os
 - Linuxer
 - Wingays
 ## Get start with
