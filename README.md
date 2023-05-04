@@ -14,12 +14,17 @@ However, it is possible for an HTTP flood attack to also affect lower layers of 
 - Linuxer
 - Wingays
 ## Get start with
-- pip/pip3 install -r requirements.txt
-- python/python3 stresser.py
+```
+$ git clone https://github.com/Pari-Malam/Stresser7
+$ cd Stresser7
+$ pip/pip3 install -r requirements.txt
+$ python/python3 stresser.py
+```
 ## Footprints Notes
 - By using this tool, you agree that you are using it for educational purposes only and that you will not use it for any illegal activity. You also agree to bear all risks associated with the use of this tool. I will not be responsible for direct or indirect damage caused by the use of this tool.
 ## Author
 - Pari Malam
 ## Contacts
 [![Telegram](https://img.shields.io/badge/-Telegram-blue)](https://telegram.me/SurpriseMTFK)
+[![Discord](https://img.shields.io/badge/-Discord-purple)](https://discordapp.com/users/829404192585678858)
 [![Forum](https://img.shields.io/badge/-Forum-red)](https://dragonforce.io)
