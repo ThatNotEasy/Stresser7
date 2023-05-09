@@ -7,3 +7,4 @@ pool
 bs4
 scapy
 kamene
+cryptography
